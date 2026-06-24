@@ -1,0 +1,166 @@
+/* ── Services List ── */
+.service-list {
+  margin-top: 0;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  align-items: start;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.service-row:last-child { border-bottom: none; }
+
+.service-index {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  padding-top: 3px;
+}
+
+.service-name {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.service-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 480px;
+}
+
+.service-pill {
+  font-size: 11px;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+/* ── Yoga Partnership Strip ── */
+.yoga-strip {
+  background: var(--off-white);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.yoga-strip h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.yoga-strip p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── Hotels Section ── */
+.hotels-section {
+  background: var(--off-white);
+}
+
+.hotel-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.hotel-text p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.hotel-partners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.hotel-pill {
+  font-size: 12px;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  color: var(--text-muted);
+  background: var(--white);
+}
+
+.hotel-features {
+  list-style: none;
+}
+
+.hotel-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-muted);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.hotel-features li:last-child { border-bottom: none; }
+
+.hotel-features li::before {
+  content: '→';
+  color: var(--text);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.hotel-callout {
+  background: var(--black);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+}
+
+.hotel-callout-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.hotel-callout h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.hotel-callout p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+.hotel-callout .btn-accent {
+  display: block;
+  text-align: center;
+}

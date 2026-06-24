@@ -1,0 +1,104 @@
+.journey-section {
+  background: var(--off-white);
+}
+
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 3rem;
+}
+
+.journey-step {
+  padding: 2rem 1.75rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-right: none;
+  position: relative;
+}
+
+.journey-step:last-child      { border-right: 1px solid var(--border); }
+.journey-step:first-child     { border-radius: var(--radius) 0 0 var(--radius); }
+.journey-step:last-child      { border-radius: 0 var(--radius) var(--radius) 0; }
+.journey-step.active          { background: var(--black); }
+
+.journey-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.journey-step.active .journey-num { color: var(--accent); }
+
+.journey-icon {
+  font-size: 28px;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.journey-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.journey-step.active .journey-title { color: var(--white); }
+
+.journey-body {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.journey-step.active .journey-body { color: rgba(255,255,255,0.5); }
+
+.journey-detail {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.journey-step.active .journey-detail { border-top-color: rgba(255,255,255,0.1); }
+
+.journey-detail-item {
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 3px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.journey-step.active .journey-detail-item { color: rgba(255,255,255,0.4); }
+
+.journey-detail-item::before {
+  content: '→';
+  flex-shrink: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.journey-arrow {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.journey-step:last-child .journey-arrow { display: none; }

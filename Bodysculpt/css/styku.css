@@ -1,0 +1,204 @@
+/* ── Styku Intro ── */
+.styku-intro {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+/* Scanner visual — shows image when available, animated placeholder when not */
+.styku-scanner-visual {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.styku-scanner-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius);
+  z-index: 2;
+}
+
+.scanner-placeholder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}
+
+.scanner-orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(200,240,74,0.3);
+  animation: orbit-spin 12s linear infinite;
+}
+
+.scanner-orbit.orbit1 { width: 170px; height: 170px; }
+.scanner-orbit.orbit2 { width: 210px; height: 210px; animation-duration: 20s; animation-direction: reverse; }
+
+@keyframes orbit-spin {
+  to { transform: rotate(360deg); }
+}
+
+.orbit-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.scanner-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(200,240,74,0.05);
+  border: 1px solid rgba(200,240,74,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scanner-inner {
+  text-align: center;
+}
+
+.scanner-inner span {
+  display: block;
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+}
+
+.scanner-inner small {
+  display: block;
+  font-size: 9px;
+  color: rgba(200,240,74,0.45);
+  letter-spacing: 0.15em;
+  margin-top: 3px;
+}
+
+/* ── Styku Data Grid ── */
+.styku-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.styku-cell {
+  background: var(--white);
+  padding: 2rem;
+}
+
+.styku-dark {
+  background: var(--black);
+}
+
+.styku-dark .styku-cell-title { color: var(--white); }
+.styku-dark .styku-cell-body  { color: rgba(255,255,255,0.5); }
+.styku-dark .styku-num        { color: var(--accent); }
+
+.styku-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.styku-cell-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.styku-cell-body {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.styku-data-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.styku-data-img img {
+  border-radius: var(--radius);
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── Scan Showcase ── */
+.scan-showcase {
+  background: var(--off-white);
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.showcase-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.showcase-img-wrap {
+  background: var(--off-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 180px;
+}
+
+.showcase-img-wrap img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.showcase-caption {
+  padding: 1.75rem;
+}
+
+.showcase-caption-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.showcase-caption-body {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
